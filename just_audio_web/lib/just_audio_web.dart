@@ -109,6 +109,7 @@ class Html5AudioPlayer extends JustAudioPlayer {
 
   /// Creates an [Html5AudioPlayer] with the given [id].
   Html5AudioPlayer({required String id}) : super(id: id) {
+    _audioElement.controls = false;
     _audioElement.addEventListener('durationchange', (event) {
       _durationCompleter?.complete();
       broadcastPlaybackEvent();
