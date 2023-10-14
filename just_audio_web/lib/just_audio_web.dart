@@ -76,6 +76,7 @@ abstract class JustAudioPlayer extends AudioPlayerPlatform {
 
   /// Broadcasts a playback event from the platform side to the plugin side.
   void broadcastPlaybackEvent() {
+    return;
     var updateTime = DateTime.now();
     _eventController.add(PlaybackEventMessage(
       processingState: _processingState,
